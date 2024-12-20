@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="page1.css">
+    <link rel="icon" href="./1.jpg" />
+    <title>Web Project</title>
+</head>
+<body>
+    
+    <header>
+        <a href="#" class="logo">Educational website</a>
+        <nav class="navigation">
+            <a href="#services">Services</a>
+            <a href="#Subjects">Subjects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+
+    <section class="main">
+        <div>
+
+            <h2>Hello To Our website<br><span>Educational headquarters</span></h2>
+            <h3>oversee academic programs, staff</br> development, resource allocation,</br> and policy implementation to enhance</br> learning environments</h3>
+            <a href="#Subjects" class="main-btn">View Subjects</a>
+            
+        </div>
+    </section>
+
+
+
+
+<section class="Subjects" id="Subjects">
+    <h2 class="title">Subjects</h2>
+    <div class="content">
+        <div class="Subject-card">
+            <div class="Subject-image">
+                <img src="1.webp">
+            </div>
+            <div class="Subject-info">
+                <p class="Subject-category"></p>
+                <strong class="Subject-title">
+                    <span>Object-Oriented Programming</span>
+                    <a href="ooppage.html" target="_blank" class="more-details">More details</a>
+                </strong>
+            </div>
+        </div>
+        <div class="Subject-card">
+            <div class="Subject-image">
+                <img src="2.jpg">
+            </div>
+            <div class="Subject-info">
+                <p class="Subject-category"></p>
+                <strong class="Subject-title">
+                    <span>Database</span>
+                    <a href="basepage.html" target="_blank" class="more-details">More </br>details</a>
+                </strong>
+            </div>
+        </div>
+        <div class="Subject-card">
+            <div class="Subject-image">
+                <img src="4.png">
+            </div>
+            <div class="Subject-info">
+                <p class="Subject-category"></p>
+                <strong class="Subject-title">
+                    <span>Data Structures</span>
+                    <a href="strpage.html" target="_blank" class="more-details">More</br> details</a>
+                </strong>
+            </div>
+        </div>
+        <div class="Subject-card">
+            <div class="Subject-image">
+                <img src="15.jpg">
+            </div>
+            <div class="Subject-info">
+                <p class="Subject-category"></p>
+                <strong class="Subject-title">
+                    <span>Computer Networks</span>
+                    <a href="netpage.html" target="_blank" class="more-details">More details</a>
+                </strong>
+            </div>
+        </div>
+        <div class="Subject-card">
+            <div class="Subject-image">
+                <img src="6.jpg">
+            </div>
+            <div class="Subject-info">
+                <p class="Subject-category"></p>
+                <strong class="Subject-title">
+                    <span>Software Engineering</span>
+                    <a href="softpage.html" target="_blank" class="more-details">More details</a>
+                </strong>
+            </div>
+        </div>
+        <div class="Subject-card">
+            <div class="Subject-image">
+                <img src="17.jpg">
+            </div>
+            <div class="Subject-info">
+                <p class="Subject-category"></p>
+                <strong class="Subject-title">
+                    <span>Web Design and Development</span>
+                    <a href="webpage.html" target="_blank" class="more-details">More details</a>
+                </strong>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cards contact" id="contact">
+    <h2 class="title">Let's learn together</h2>
+    <div class="content">
+        <div class="card">
+            <div class="icon">
+                <i class="fas fa-phone"></i>
+            </div>
+            <div class="info">
+                <h3>Phone</h3>
+                <p>+20122222222</p>
+                <a href="page2.html"  target="_blank" class="GO">GO</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="icon">
+                <i class="fas fa-envelope"></i>
+            </div>
+            <div class="info">
+                <h3>Email</h3>
+                <p>business@team.com</p>
+                <a href="page2.html"  target="_blank" class="GO">GO</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="scroll-buttons">
+    <button id="scrollTopButton">Scroll to Top</button>
+    <button id="scrollDownButton">Scroll to Bottom</button>
+  </div>
+  
+
+
+<script>
+    document.getElementById('scrollTopButton').addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  
+    document.getElementById('scrollDownButton').addEventListener('click', () => {
+      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    });
+  </script>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./111.jpg" />
+  <title>Object-Oriented Programming</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f9;
+      color: #333;
+    }
+    header {
+      background: #007BFF;
+      color: white;
+      text-align: center;
+      padding: 20px 100px;
+    }
+    .container {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    h2, h3 {
+      color: #007BFF;
+    }
+    p {
+      line-height: 1.8;
+    }
+    .code-example {
+      background: #f9f9f9;
+      padding: 15px;
+      border-left: 4px solid #007BFF;
+      font-family: monospace;
+      overflow-x: auto;
+    }
+    .interactive-section {
+      margin: 20px 0;
+      padding: 20px;
+      background: #eef7ff;
+      border-radius: 8px;
+      text-align: center;
+    }
+    button {
+      background: #007BFF;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    footer {
+      text-align: center;
+      padding: 10px;
+      background: #333;
+      color: white;
+      margin-top: 20px;
+    }
+    .scroll-buttons {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+    .scroll-buttons button {
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Introduction to Object-Oriented Programming (OOP)</h1>
+</header>
+
+<div class="container">
+  <h2>What is Object-Oriented Programming?</h2>
+  <p>
+    Object-Oriented Programming (OOP) is a programming paradigm based on the concept of "objects", 
+    which are instances of classes. OOP allows the structuring of software in a more modular and reusable way.
+  </p>
+
+  <h3>Core Principles of OOP</h3>
+  <p>OOP is built on the following core principles:</p>
+  <ul>
+    <li><strong>Encapsulation:</strong> Bundling of data and methods that operate on the data.</li>
+    <li><strong>Inheritance:</strong> Mechanism where one class can inherit properties and behaviors from another.</li>
+    <li><strong>Polymorphism:</strong> Ability to take multiple forms, enabling the same method to behave differently based on the object.</li>
+    <li><strong>Abstraction:</strong> Hiding the complex implementation details and exposing only the necessary parts.</li>
+  </ul>
+
+  <h3>Class and Object</h3>
+  <p>
+    In OOP, a class is a blueprint for creating objects. An object is an instance of a class.
+    Here’s a simple example:
+  </p>
+  <div class="code-example">
+    <pre>
+class Car {
+  constructor(make, model) {
+    this.make = make;
+    this.model = model;
+  }
+
+  drive() {
+    console.log(\`Driving a \${this.make} \${this.model}\`);
+  }
+}
+
+const myCar = new Car('Toyota', 'Corolla');
+myCar.drive();  // Output: Driving a Toyota Corolla
+    </pre>
+  </div>
+
+  <h3>Inheritance in OOP</h3>
+  <p>
+    Inheritance allows a class to inherit properties and methods from another class. It promotes reusability and a hierarchical class structure.
+  </p>
+  <div class="code-example">
+    <pre>
+class Animal {
+  constructor(name) {
+    this.name = name;
+  }
+
+  speak() {
+    console.log(\`My name is \${this.name}\`);
+  }
+}
+
+class Dog extends Animal {
+  constructor(name, breed) {
+    super(name);
+    this.breed = breed;
+  }
+
+  speak() {
+    console.log(\`My name is \${this.name}, and I am a \${this.breed} dog\`);
+  }
+}
+
+const myDog = new Dog('Buddy', 'Golden Retriever');
+myDog.speak();  // Output: My name is Buddy, and I am a Golden Retriever dog
+    </pre>
+  </div>
+
+  <h3>Polymorphism and Abstraction</h3>
+  <p>
+    Polymorphism allows different classes to define methods with the same name, but with different implementations. Abstraction hides unnecessary implementation details.
+  </p>
+  <div class="code-example">
+    <pre>
+class Shape {
+  area() {
+    throw "Area method must be implemented in subclass";
+  }
+}
+
+class Circle extends Shape {
+  constructor(radius) {
+    super();
+    this.radius = radius;
+  }
+
+  area() {
+    return Math.PI * Math.pow(this.radius, 2);
+  }
+}
+
+const myCircle = new Circle(5);
+console.log(myCircle.area());  // Output: 78.53981633974483
+    </pre>
+  </div>
+
+  
+
+  <h3>Real-World Applications of OOP</h3>
+  <ul>
+    <li><strong>Game Development:</strong> OOP is widely used for creating game objects like characters, enemies, and weapons.</li>
+    <li><strong>Software Applications:</strong> Most modern applications use OOP for better code organization and maintainability.</li>
+    <li><strong>Web Development:</strong> JavaScript frameworks and libraries like React use OOP principles.</li>
+  </ul>
+</div>
+
+<footer>
+  <p>Master the principles of Object-Oriented Programming to build scalable and maintainable applications!</p>
+</footer>
+
+<div class="scroll-buttons">
+  <button id="scrollTopButton">Scroll to Top</button>
+  <button id="scrollDownButton">Scroll to Bottom</button>
+</div>
+
+<script>
+  document.getElementById('scrollTopButton').addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  document.getElementById('scrollDownButton').addEventListener('click', () => {
+    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+  });
+
+  
+</script>
+
+</body>
+</html>

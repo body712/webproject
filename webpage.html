@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./77.jpg" />
+  <title>Web Design and Development</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f9;
+      color: #333;
+    }
+    header {
+      background: #007BFF;
+      color: white;
+      text-align: center;
+      padding: 20px 100;
+    }
+    .container {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    h2, h3 {
+      color: #007BFF;
+    }
+    p {
+      line-height: 1.8;
+    }
+    .code-example {
+      background: #f9f9f9;
+      padding: 15px;
+      border-left: 4px solid #007BFF;
+      font-family: monospace;
+      overflow-x: auto;
+    }
+    .interactive-section {
+      margin: 20px 0;
+      padding: 20px;
+      background: #eef7ff;
+      border-radius: 8px;
+      text-align: center;
+    }
+    button {
+      background: #007BFF;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    footer {
+      text-align: center;
+      padding: 10px;
+      background: #333;
+      color: white;
+      margin-top: 20px;
+    }
+    .scroll-buttons {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+    .scroll-buttons button {
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Introduction to Web Design and Development</h1>
+</header>
+
+<div class="container">
+  <h2>What is Web Design and Development?</h2>
+  <p>
+    Web design and development involve creating and maintaining websites. It combines design (HTML and CSS) 
+    with functionality (JavaScript) to build interactive and user-friendly experiences.
+  </p>
+
+  <h3>HTML: The Foundation</h3>
+  <p>
+    HTML (HyperText Markup Language) provides the structure for a webpage. It defines elements like headings, 
+    paragraphs, images, and links.
+  </p>
+  <div class="code-example">
+    <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;My Webpage&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Welcome to My Website&lt;/h1&gt;
+    &lt;p&gt;This is a paragraph of text.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+    </pre>
+  </div>
+
+  <h3>CSS: The Style</h3>
+  <p>
+    CSS (Cascading Style Sheets) is used to style the webpage, controlling colors, fonts, layouts, 
+    and responsiveness.
+  </p>
+  <div class="code-example">
+    <pre>
+body {
+  background-color: #f4f4f9;
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: #007BFF;
+}
+    </pre>
+  </div>
+
+  <h3>JavaScript: The Interaction</h3>
+  <p>
+    JavaScript adds interactivity and dynamic features to the website, such as animations, 
+    event handling, and real-time updates.
+  </p>
+  <div class="code-example">
+    <pre>
+document.getElementById('myButton').addEventListener('click', function() {
+  alert('Hello, welcome to my website!');
+});
+    </pre>
+  </div>
+
+  
+
+  <h3>Why Combine HTML, CSS, and JavaScript?</h3>
+  <p>
+    These three technologies form the building blocks of modern web development:
+  </p>
+  <ul>
+    <li><strong>HTML:</strong> Creates the structure of the page.</li>
+    <li><strong>CSS:</strong> Styles the page for better visual appeal.</li>
+    <li><strong>JavaScript:</strong> Adds interactivity for a dynamic user experience.</li>
+  </ul>
+
+  <h3>Real-World Applications:</h3>
+  <ul>
+    <li><strong>E-commerce Websites:</strong> Interactive product displays and carts.</li>
+    <li><strong>Blogs:</strong> Styled articles with interactive comments.</li>
+    <li><strong>Web Apps:</strong> Tools like calculators or project management apps.</li>
+  </ul>
+</div>
+
+<footer>
+  <p>Master the art of web design and development to create amazing websites!</p>
+</footer>
+
+<div class="scroll-buttons">
+  <button id="scrollTopButton">Scroll to Top</button>
+  <button id="scrollDownButton">Scroll to Bottom</button>
+</div>
+
+<script>
+  document.getElementById('scrollTopButton').addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  document.getElementById('scrollDownButton').addEventListener('click', () => {
+    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+  });
+</script>
+
+</body>
+</html>

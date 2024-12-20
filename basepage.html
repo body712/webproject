@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./33.png" />
+  <title>Database</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f9;
+      color: #333;
+    }
+    header {
+      background: #007BFF;
+      color: white;
+      text-align: center;
+      padding: 20px 100;
+    }
+    .container {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    h2, h3 {
+      color: #007BFF;
+    }
+    p, ul {
+      line-height: 1.8;
+    }
+    ul {
+      margin-bottom: 20px;
+    }
+    .code-example {
+      background: #f9f9f9;
+      padding: 15px;
+      border-left: 4px solid #007BFF;
+      font-family: monospace;
+      overflow-x: auto;
+      margin-bottom: 20px;
+    }
+    .interactive-section {
+      margin: 20px 0;
+      padding: 20px;
+      background: #eef7ff;
+      border-radius: 8px;
+      text-align: center;
+    }
+    button {
+      background: #007BFF;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    footer {
+      text-align: center;
+      padding: 10px;
+      background: #333;
+      color: white;
+      margin-top: 20px;
+    }
+    .scroll-buttons {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+    .scroll-buttons button {
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Introduction to Databases</h1>
+</header>
+
+<div class="container">
+  <h2>What is a Database?</h2>
+  <p>
+    A database is an organized collection of data that allows for easy access, management, and updating. 
+    Databases are fundamental for storing and retrieving information in applications ranging from websites to enterprise systems.
+  </p>
+
+  <h3>Types of Databases</h3>
+  <ul>
+    <li><strong>Relational Databases:</strong> Use tables to store data and establish relationships between them (e.g., MySQL, PostgreSQL).</li>
+    <li><strong>NoSQL Databases:</strong> Designed for unstructured data, these databases are more flexible in terms of data storage (e.g., MongoDB, CouchDB).</li>
+    <li><strong>Object-Oriented Databases:</strong> Store data in the form of objects, similar to object-oriented programming (e.g., db4o).</li>
+    <li><strong>Graph Databases:</strong> Designed to store and manage relationships in the form of graphs (e.g., Neo4j).</li>
+  </ul>
+
+  <h3>SQL Example</h3>
+  <p>
+    SQL (Structured Query Language) is used to interact with relational databases. Below is an example of a simple SQL query.
+  </p>
+  <div class="code-example">
+    <pre>
+-- SQL Query to select all data from a 'users' table
+SELECT * FROM users WHERE age > 18;
+    </pre>
+  </div>
+
+  <h3>NoSQL Example</h3>
+  <p>
+    NoSQL databases use different querying systems, and below is an example using MongoDB syntax.
+  </p>
+  <div class="code-example">
+    <pre>
+db.users.find({ age: { $gt: 18 } });
+    </pre>
+  </div>
+
+  <h2>Why Are Databases Important?</h2>
+  <p>
+    Databases are essential for organizing and managing large amounts of data efficiently. Without databases, it would be challenging to store, retrieve, and manipulate data quickly, especially in large-scale applications.
+  </p>
+
+  <h3>Real-World Applications of Databases:</h3>
+  <ul>
+    <li><strong>Customer Relationship Management (CRM):</strong> Stores customer details, interaction history, and more.</li>
+    <li><strong>E-commerce:</strong> Manages product catalogs, customer orders, and transactions.</li>
+    <li><strong>Social Media:</strong> Stores user profiles, posts, and interactions between users.</li>
+    <li><strong>Healthcare:</strong> Manages patient records, treatment history, and appointments.</li>
+    <li><strong>Banking:</strong> Stores account details, transactions, and balances.</li>
+  </ul>
+</div>
+
+<footer>
+  <p>Understanding databases helps you build efficient, scalable applications!</p>
+</footer>
+
+<div class="scroll-buttons">
+  <button id="scrollTopButton">Scroll to Top</button>
+  <button id="scrollDownButton">Scroll to Bottom</button>
+</div>
+
+<script>
+  document.getElementById('scrollTopButton').addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  document.getElementById('scrollDownButton').addEventListener('click', () => {
+    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+  });
+</script>
+
+</body>
+</html>

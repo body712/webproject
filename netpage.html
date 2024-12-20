@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./55.png" />
+  <title>Computer Networks</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f9;
+      color: #333;
+    }
+    header {
+      background: #007BFF;
+      color: white;
+      text-align: center;
+      padding: 20px 100;
+    }
+    .container {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    h2, h3 {
+      color: #007BFF;
+    }
+    p, ul {
+      line-height: 1.8;
+    }
+    ul {
+      margin-bottom: 20px;
+    }
+    .code-example {
+      background: #f9f9f9;
+      padding: 15px;
+      border-left: 4px solid #007BFF;
+      font-family: monospace;
+      overflow-x: auto;
+      margin-bottom: 20px;
+    }
+    .interactive-section {
+      margin: 20px 0;
+      padding: 20px;
+      background: #eef7ff;
+      border-radius: 8px;
+      text-align: center;
+    }
+    button {
+      background: #007BFF;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    footer {
+      text-align: center;
+      padding: 10px;
+      background: #333;
+      color: white;
+      margin-top: 20px;
+    }
+    .scroll-buttons {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+    .scroll-buttons button {
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Introduction to Computer Networks</h1>
+</header>
+
+<div class="container">
+  <h2>What Are Computer Networks?</h2>
+  <p>
+    Computer networks are systems of interconnected devices that communicate and share data. 
+    They enable resource sharing, communication, and distributed computing.
+  </p>
+
+  <h3>Types of Networks</h3>
+  <ul>
+    <li><strong>LAN (Local Area Network):</strong> A network within a small area, like a building.</li>
+    <li><strong>WAN (Wide Area Network):</strong> A network spanning large distances, like the Internet.</li>
+    <li><strong>MAN (Metropolitan Area Network):</strong> A network covering a city.</li>
+    <li><strong>Wireless Networks:</strong> Networks without physical connections, using Wi-Fi or mobile data.</li>
+  </ul>
+
+  <h3>Sample Code for Ping Test</h3>
+  <div class="code-example">
+    <pre>
+import os
+response = os.system("ping google.com")
+if response == 0:
+    print("Network Active")
+else:
+    print("Network Error")
+    </pre>
+  </div>
+
+  <h2>Understanding Protocols</h2>
+  <p>Protocols are sets of rules that govern how data is transmitted across networks. Common protocols include:</p>
+  <ul>
+    <li><strong>TCP/IP:</strong> The foundational protocol suite for Internet communication.</li>
+    <li><strong>HTTP:</strong> Protocol used for web browsing.</li>
+    <li><strong>FTP:</strong> File transfer protocol used for transferring files between devices.</li>
+  </ul>
+
+  <h3>IP Addressing</h3>
+  <p>
+    An IP address is a unique identifier assigned to devices on a network. There are two versions: IPv4 and IPv6.
+  </p>
+
+  <h2>Network Topologies</h2>
+  <p>
+    Network topology refers to the arrangement of network devices. Some common topologies include:
+  </p>
+  <ul>
+    <li><strong>Bus Topology:</strong> A single central cable serves all devices.</li>
+    <li><strong>Ring Topology:</strong> Devices are connected in a circular fashion.</li>
+    <li><strong>Star Topology:</strong> All devices are connected to a central hub.</li>
+  </ul>
+
+  <h3>Subnetting</h3>
+  <p>
+    Subnetting is the process of dividing a large network into smaller sub-networks for better management.
+  </p>
+
+  <h2>Conclusion</h2>
+  <p>
+    Understanding computer networks is fundamental to grasping the modern digital world. From communication to resource sharing, networks play a pivotal role in shaping the way we interact with technology.
+  </p>
+</div>
+
+<footer>
+  <p>Explore the fascinating world of computer networks!</p>
+</footer>
+
+<div class="scroll-buttons">
+  <button id="scrollTopButton">Scroll to Top</button>
+  <button id="scrollDownButton">Scroll to Bottom</button>
+</div>
+<div class="Moataz">
+
+</div>
+
+<script>
+  document.getElementById('scrollTopButton').addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+  var test = document.getElementsByClassName('Moataz');
+console.log(test);
+  document.getElementById('scrollDownButton').addEventListener('click', () => {
+    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+  });
+</script>
+
+</body>
+</html>

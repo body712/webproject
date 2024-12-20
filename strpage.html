@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./44.png" />
+  <title>Data Structures</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f9;
+      color: #333;
+    }
+    header {
+      background: #007BFF;
+      color: white;
+      text-align: center;
+      padding: 20px 100;
+    }
+    .container {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    h2, h3 {
+      color: #007BFF;
+    }
+    p, ul {
+      line-height: 1.8;
+    }
+    ul {
+      margin-bottom: 20px;
+    }
+    .code-example {
+      background: #f9f9f9;
+      padding: 15px;
+      border-left: 4px solid #007BFF;
+      font-family: monospace;
+      overflow-x: auto;
+      margin-bottom: 20px;
+    }
+    .interactive-section {
+      margin: 20px 0;
+      padding: 20px;
+      background: #eef7ff;
+      border-radius: 8px;
+      text-align: center;
+    }
+    button {
+      background: #007BFF;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    footer {
+      text-align: center;
+      padding: 10px;
+      background: #333;
+      color: white;
+      margin-top: 20px;
+    }
+    .scroll-buttons {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+    .scroll-buttons button {
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Introduction to Data Structures</h1>
+</header>
+
+<div class="container">
+  <h2>What Are Data Structures?</h2>
+  <p>
+    Data structures are ways of organizing and storing data efficiently, so it can be accessed and manipulated effectively.
+    Understanding data structures is fundamental to computer science and algorithms.
+  </p>
+
+  <h3>Types of Data Structures</h3>
+  <ul>
+    <li><strong>Arrays:</strong> A collection of elements stored at contiguous memory locations.</li>
+    <li><strong>Linked Lists:</strong> A linear collection of elements where each element points to the next.</li>
+    <li><strong>Stacks:</strong> A linear data structure that follows the LIFO (Last In, First Out) principle.</li>
+    <li><strong>Queues:</strong> A linear data structure that follows the FIFO (First In, First Out) principle.</li>
+    <li><strong>Trees:</strong> A hierarchical structure with nodes, where each node has a value and pointers to child nodes.</li>
+    <li><strong>Graphs:</strong> A collection of nodes (vertices) and edges connecting pairs of nodes.</li>
+  </ul>
+
+  <h3>Array Example</h3>
+  <p>
+    Arrays are a simple, linear data structure. Below is an example of an array in JavaScript:
+  </p>
+  <div class="code-example">
+    <pre>
+let numbers = [1, 2, 3, 4, 5];
+console.log(numbers[0]);  // Output: 1
+    </pre>
+  </div>
+
+  <h3>Linked List Example</h3>
+  <p>
+    A linked list consists of nodes, where each node contains data and a reference (or pointer) to the next node in the sequence.
+  </p>
+  <div class="code-example">
+    <pre>
+class Node {
+  constructor(data) {
+    this.data = data;
+    this.next = null;
+  }
+}
+
+class LinkedList {
+  constructor() {
+    this.head = null;
+  }
+
+  append(data) {
+    let newNode = new Node(data);
+    if (!this.head) {
+      this.head = newNode;
+    } else {
+      let current = this.head;
+      while (current.next) {
+        current = current.next;
+      }
+      current.next = newNode;
+    }
+  }
+}
+
+let list = new LinkedList();
+list.append(10);
+list.append(20);
+list.append(30);
+console.log(list);
+    </pre>
+  </div>
+
+  <h2>Why Are Data Structures Important?</h2>
+  <p>
+    Data structures are crucial because they provide a way to efficiently store, retrieve, and manipulate data. 
+    Proper choice of data structure can significantly affect the performance of algorithms.
+  </p>
+
+  <h3>Real-World Applications:</h3>
+  <ul>
+    <li><strong>Arrays:</strong> Used for storing data in applications like spreadsheets, data tables, and graphs.</li>
+    <li><strong>Stacks:</strong> Used in function calls, undo mechanisms in text editors, and parsing expressions.</li>
+    <li><strong>Queues:</strong> Used in job scheduling, printing queues, and handling requests in web servers.</li>
+    <li><strong>Trees:</strong> Used in databases (B-trees), file systems, and for searching in hierarchical structures.</li>
+    <li><strong>Graphs:</strong> Used in social networks, routing algorithms, and web crawlers.</li>
+  </ul>
+</div>
+
+<footer>
+  <p>Master the concepts of data structures to optimize algorithms and improve software performance!</p>
+</footer>
+
+<div class="scroll-buttons">
+  <button id="scrollTopButton">Scroll to Top</button>
+  <button id="scrollDownButton">Scroll to Bottom</button>
+</div>
+
+<script>
+  document.getElementById('scrollTopButton').addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  document.getElementById('scrollDownButton').addEventListener('click', () => {
+    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+  });
+</script>
+
+</body>
+</html>

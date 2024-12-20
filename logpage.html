@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #007BFF;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #ffffff;
+        }
+
+        form {
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+            width: 400px;
+            padding: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 28px;
+            color: #333333;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-size: 14px;
+            color: #666666;
+            display: block;
+            margin: 10px 0 5px;
+            text-align: left;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        select {
+            width: 100%;
+            padding: 12px;
+            margin: 5px 0 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="password"]:focus,
+        select:focus {
+            border-color: #007BFF;
+            outline: none;
+            box-shadow: 0px 0px 5px rgba(106, 17, 203, 0.5);
+        }
+
+        .checkbox-container {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .checkbox-container label {
+            font-size: 14px;
+            color: #666666;
+        }
+
+        button {
+            background: #007BFF;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background: #220389;
+        }
+
+        .footer {
+            margin-top: 10px;
+            font-size: 12px;
+            color: #666666;
+        }
+    </style>
+</head>
+<body>
+    <form id="registrationForm">
+        <h1>Registration Form</h1>
+        
+        <label for="username">First Name (required):</label>
+        <input type="text" id="username" name="username" placeholder="Enter your first name" required>
+
+        <label for="lastname">Last Name (required):</label>
+        <input type="text" id="lastname" name="lastname" placeholder="Enter your last name" required>
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+            <option value="" disabled selected>Select your gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+
+        <label for="email">Email (required):</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <label for="password">Password (required):</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+        <div class="checkbox-container">
+            <input type="checkbox" id="terms" name="terms">
+            <label for="terms">I agree to the terms and conditions</label>
+        </div>
+
+        <button type="button" onclick="validateForm()">Submit</button>
+
+        <div class="footer">© 2024 Your Company Name</div>
+    </form>
+
+    <script>
+        function validateForm() {
+            const username = document.getElementById("username").value.trim();
+            const lastname = document.getElementById("lastname").value.trim();
+            const gender = document.getElementById("gender").value;
+            const email = document.getElementById("email").value.trim();
+            const password = document.getElementById("password").value.trim();
+            const terms = document.getElementById("terms").checked;
+
+            if (username && lastname && gender && email && password && terms) {
+                window.location.href = "page1.html";
+            } else {
+                alert("You must fill in all the required fields and agree to the terms and conditions.");
+            }
+        }
+    </script>
+</body>
+</html>

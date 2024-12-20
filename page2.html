@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <link rel="icon" href="12.jpg" />
+  <title>Contact Us</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #007BFF;
+      color: white;
+      padding: 20px 100px;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    section {
+      margin-bottom: 50px;
+      padding: 20px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      color: #007BFF;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #007BFF;
+      color: white;
+      position: relative;
+    }
+
+    #scrollTopBtn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: none;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 15px;
+      cursor: pointer;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    #scrollTopBtn:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Contact Us</h1>
+    <nav>
+      <ul>
+        <li><a href="#phone">Contact by Phone</a></li>
+        <li><a href="#email">Contact by Email</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="phone">
+      <h2>Contact Us by Phone</h2>
+      <p>You can reach us directly by phone at the number below:</p>
+      <p><strong>Phone:</strong> <a href="tel:+123456789">+123 456 789</a></p>
+      <p>Our customer support team is available Monday to Friday, 9:00 AM to 6:00 PM.</p>
+    </section>
+
+    <section id="email">
+      <h2>Contact Us by Email</h2>
+      <p>If you prefer, you can send us an email at:</p>
+      <p><strong>Email:</strong> <a href="mailto:support@example.com">support@example.com</a></p>
+      <p>We strive to respond to all emails within 24 hours on business days.</p>
+    </section>
+
+    <section>
+      <h2>Location</h2>
+      <p>Feel free to visit us at our office:</p>
+      <p><strong>Address:</strong> 123 Main Street, City, Country</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Contact Us Page</p>
+  </footer>
+
+  <button id="scrollTopBtn" title="Go to top">Top</button>
+
+  <script>
+    const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+    window.onscroll = function () {
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        scrollTopBtn.style.display = "block";
+      } else {
+        scrollTopBtn.style.display = "none";
+      }
+    };
+
+    scrollTopBtn.addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
+</body>
+</html>
